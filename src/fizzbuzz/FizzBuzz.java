@@ -21,6 +21,6 @@ public class FizzBuzz {
     public static void main(String[] args) {
         FizzBuzz fb = new FizzBuzz();
 
-        fb.iteradorFizzBuzz(25);
+        fb.iteradorFizzBuzz(15);
     }
 }

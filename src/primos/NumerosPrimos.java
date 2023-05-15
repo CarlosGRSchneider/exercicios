@@ -35,7 +35,6 @@ public class NumerosPrimos {
     }
 
     private boolean avaliaPrimoRecursivo(int numero, int divisor) {
-        System.out.println(divisor);
         if (numero <= 2) {
             return true;
         }

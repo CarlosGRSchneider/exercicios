@@ -31,10 +31,11 @@ public class NumerosPrimos {
     }
 
     public boolean avaliaSeNumeroEhPrimoRecursivo(int numero) {
-        return avaliaPrimoRecursivo(numero, 2);
+        return avaliaPrimoRecursivo(numero, 3);
     }
 
     private boolean avaliaPrimoRecursivo(int numero, int divisor) {
+        System.out.println(divisor);
         if (numero <= 2) {
             return true;
         }

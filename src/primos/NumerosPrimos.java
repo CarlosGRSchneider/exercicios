@@ -73,7 +73,7 @@ public class NumerosPrimos {
         System.out.print( "Para o caso de 1.000.003: ");
         System.out.println(nup.avaliaSeNumeroEhPrimoRefatorado(1000003));
         System.out.println("------------------------------------");
-        System.out.println("Avaliação de numero primo simples");
+        System.out.println("Avaliação de numero primo recursivo");
         System.out.print( "Para o caso de 1.000.000: ");
         System.out.println(nup.avaliaSeNumeroEhPrimoRecursivo(1000000));
         System.out.print( "Para o caso de 1.000.003: ");

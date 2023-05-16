@@ -17,8 +17,10 @@ public class CrivoDeEratostenes {
 
         int limite = (int) Math.sqrt(tamanhoMaximo) + 1;
         for(int i = 2; i < tamanhoMaximo; i++) {
-            for(int j = i * i; j <= tamanhoMaximo; j+=i) {
-                listaDeInteiros.remove(Integer.valueOf(j));
+            if(listaDeInteiros.contains(i)) {
+                for(int j = i * i; j <= tamanhoMaximo; j+=i) {
+                    listaDeInteiros.remove(Integer.valueOf(j));
+                }
             }
         }
     return listaDeInteiros;
@@ -27,7 +29,7 @@ public class CrivoDeEratostenes {
     public static void main(String[] args) {
         CrivoDeEratostenes crivo = new CrivoDeEratostenes();
 
-        List<Integer> primosAteCem = crivo.geraCrivoDeEratostenes(50);
-        primosAteCem.stream().forEach(System.out::println);
+        List<Integer> primosAteCinquenta = crivo.geraCrivoDeEratostenes(50);
+        primosAteCinquenta.stream().forEach(System.out::println);
     }
 }

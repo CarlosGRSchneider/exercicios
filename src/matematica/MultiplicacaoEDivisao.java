@@ -6,7 +6,6 @@ public class MultiplicacaoEDivisao {
         if(y == 0 ) {
             return 0;
         }
-        int resultado = x;
         return x + multiplicacao(x, y - 1);
     }
 
@@ -57,10 +56,10 @@ public class MultiplicacaoEDivisao {
     public static void main(String[] args) {
         MultiplicacaoEDivisao mEd = new MultiplicacaoEDivisao();
 
-        System.out.println(mEd.multiplicacao(8, 4));
-        System.out.println(mEd.multiplicacaoIterativa(8, 4));
+        System.out.println(mEd.multiplicacao(6, 3));
+        System.out.println(mEd.multiplicacaoIterativa(6, 3));
 
-        System.out.println(mEd.divisao(32, 4));
-        System.out.println(mEd.divisaoIterativa(35, 4));
+        System.out.println(mEd.divisao(18, 3));
+        System.out.println(mEd.divisaoIterativa(20, 3));
     }
 }

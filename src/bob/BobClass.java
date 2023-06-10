@@ -10,10 +10,9 @@ public class BobClass {
 
         bobFrase = bobFrase.toLowerCase();
 
-        for (int i = 0; i < bobFrase.length() - 2; i ++) {
+        for (int i = 0; i < bobFrase.length() - 2; i++) {
             String possivelBob = bobFrase.substring(i, i + 3);
-//            System.out.println(possivelBob);
-            if(possivelBob.equals("bob")) {
+            if (possivelBob.equals("bob")) {
                 contador++;
             }
         }
@@ -25,6 +24,7 @@ public class BobClass {
         BobClass bobClass = new BobClass();
 
         System.out.println(bobClass.BobCount(null));
-        System.out.println(bobClass.BobCount("bobob, ola, eu sou o Bob, meu amigo, aqui não tem bo"));
+        System.out.println(bobClass.BobCount("O rato roeu a roupa do rei de roma"));
+        System.out.println(bobClass.BobCount("bobob, ola, eu sou o Bob, meu amigo, aqui não tem BO."));
     }
 }

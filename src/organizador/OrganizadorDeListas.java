@@ -6,29 +6,29 @@ import java.util.Map;
 
 public class OrganizadorDeListas {
 
-    public static Map<String, Integer> organizaLista(List<String> nomes) {
+    public static Map<String, Integer> organizaLista(List<String> musicas) {
 
         Map<String, Integer> result = new HashMap<>();
 
-        for (String nome : nomes) {
+        for (String musica : musicas) {
 
-            if (result.containsKey(nome)) {
-                int contagemAgual = result.get(nome);
-                result.replace(nome, contagemAgual + 1);
+            if (result.containsKey(musica)) {
+                int contagemAgual = result.get(musica);
+                result.replace(musica, contagemAgual + 1);
             } else {
-                result.put(nome, 1);
+                result.put(musica, 1);
             }
         }
 
         return result;
     }
 
-    public static Map<String, Integer> organizaListaComMerge(List<String> nomes) {
+    public static Map<String, Integer> organizaListaComMerge(List<String> musicas) {
 
         Map<String, Integer> result = new HashMap<>();
 
-        for (String nome : nomes) {
-            result.merge(nome, 1, Integer::sum);
+        for (String musica : musicas) {
+            result.merge(musica, 1, Integer::sum);
         }
         return result;
     }

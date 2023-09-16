@@ -35,16 +35,19 @@ public class OrganizadorDeListas {
 
     public static void main(String[] args) {
 
-        List<String> nomesInformados = List.of("Livin' on a prayer", "Livin' on a prayer", "Enter Sandman", "Cherry bomb", "Thunderstruck", "Livin' on a prayer", "Thunderstruck", "Enter Sandman", "Livin' on a prayer", "Thunderstruck", "Stairway to Heaven", "Enter Sandman");
+        List<String> musicasInformadas = List.of("Livin' on a prayer", "Livin' on a prayer", "Enter Sandman", "Cherry bomb", "Thunderstruck", "Livin' on a prayer", "Thunderstruck", "Enter Sandman", "Livin' on a prayer", "Thunderstruck", "Stairway to Heaven", "Enter Sandman");
 
-        Map<String, Integer> nomesOrganizados = OrganizadorDeListas.organizaLista(nomesInformados);
+        Map<String, Integer> nomesOrganizados = OrganizadorDeListas.organizaLista(musicasInformadas);
 
+        System.out.println("Organização de listas sem o merge");
         for(Map.Entry<String, Integer> nome : nomesOrganizados.entrySet()) {
             System.out.println("Nome: " + nome.getKey() + " | Quantidade: " + nome.getValue());
         }
 
         System.out.println("--------------------------------------");
-        Map<String, Integer> nomesOrganizadosMerge = OrganizadorDeListas.organizaListaComMerge(nomesInformados);
+
+        System.out.println("Organização de listas com o merge");
+        Map<String, Integer> nomesOrganizadosMerge = OrganizadorDeListas.organizaListaComMerge(musicasInformadas);
 
         for(Map.Entry<String, Integer> nome : nomesOrganizadosMerge.entrySet()) {
             System.out.println("Nome: " + nome.getKey() + " | Quantidade: " + nome.getValue());
